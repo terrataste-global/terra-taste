@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra Taste | Global Flavors, Local Roots</title>
+    <style>
+        :root {
+            --earth-brown: #5C3A21;
+            --light-brown: #8D5B4C;
+            --soft-cream: #FDFBF7;
+            --earth-green: #3B5323;
+            --accent-gold: #C29B38;
+            --text-dark: #2C221E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--earth-brown);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .brand-title {
+            color: var(--soft-cream);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--soft-cream);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section with Logo on Top Background */
+        .hero {
+            background: linear-gradient(rgba(92, 58, 33, 0.85), rgba(59, 83, 35, 0.85)), url('mayon.png') no-repeat center center/cover;
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 5rem 1.5rem;
+        }
+
+        .hero img.hero-logo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent-gold);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 750px;
+            margin: 0 auto 2rem auto;
+            color: #f4efe6;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--text-dark);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background-color: #d4ab42;
+        }
+
+        /* Main Content Containers */
+        .container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .content-block {
+            background: white;
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+        }
+
+        .content-block h2 {
+            color: var(--earth-brown);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-block p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .content-block img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Highlight Section for Professional Standards */
+        .standards-box {
+            background-color: #f4efe6;
+            border-left: 6px solid var(--earth-green);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .standards-box h3 {
+            color: var(--earth-brown);
+            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .content-block {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Terra Taste Logo">
+                <span class="brand-title">Terra Taste</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Top Logo & Background -->
+    <section class="hero">
+        <img src="logo.jpeg" alt="Terra Taste Logo" class="hero-logo">
+        <h1>Global Flavors, Local Roots</h1>
+        <p>In Terra Taste, you feel home again when you're away from your country. Explore the taste and know the value of our ancestors' makings.</p>
+        <a href="services.html" class="btn">Explore Our Menu</a>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Story & Roots Block -->
+        <div class="content-block">
+            <h2>Welcome to Terra Taste</h2>
+            <p>Terra Taste was global local food, which came from our local roots. We make it unique to make it more tastier and yummy. We value our ancestors and the history of where our local food and drink roots came from.</p>
+            
+            <p>In Terra Taste, we make it unique. We love to make you happy and full, and enjoy eating together with your family. When you are away from home, we bring that comforting connection right to your table.</p>
+
+            <img src="farmer.png" alt="Authentic farm and agricultural roots">
+            <p><em>Connecting deeply with our land, our crops, and the traditions handed down through generations.</em></p>
+        </div>
+
+        <!-- Professional Standards Block -->
+        <div class="content-block">
+            <h2>Professional Tourism, Hospitality & F&B Standards</h2>
+            <p>Terra Taste is not only focusing on your cravings as we are professional tourism, hospitality, and food and beverage professionals.</p>
+            
+            <div class="standards-box">
+                <h3>Our Core Priority: Safety First</h3>
+                <p>Our top priorities are <strong>food hygiene, rigorous safety protocols, and clear allergens notification awareness</strong> for everyone's safety so you can enjoy with complete peace of mind.</p>
+            </div>
+
+            <p>Terra Taste helps you explore the taste of the world. We will continue contributing with our farmers, helping local people, and joining local events and festivals to share with our locals—and we would love to share with you as well!</p>
+
+            <img src="mayon.png" alt="Mayon Volcano and local fields view">
+            <p><em>The breathtaking view of Mayon that inspires our daily culinary journey.</em></p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Terra Taste. All rights reserved.</p>
+        <p>Global Flavors, Local Roots | Connect with us on IG & TikTok: @terra_taste & @terrataste.globalroots</p>
+    </footer>
+
+</body>
+</html>
