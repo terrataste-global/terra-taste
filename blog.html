@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories from the Roots & Mother Earth | Terra Taste</title>
+    <style>
+        :root {
+            --earth-brown: #5C3A21;
+            --light-brown: #8D5B4C;
+            --soft-cream: #FDFBF7;
+            --earth-green: #3B5323;
+            --accent-gold: #C29B38;
+            --text-dark: #2C221E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--earth-brown);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .brand-title {
+            color: var(--soft-cream);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--soft-cream);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Page Banner */
+        .page-banner {
+            background: linear-gradient(rgba(92, 58, 33, 0.8), rgba(59, 83, 35, 0.8)), url('mayon.png') no-repeat center center/cover;
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .page-banner h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-banner p {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto;
+            color: #f0ebd8;
+        }
+
+        /* Blog Container */
+        .blog-container {
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+            border: 1px solid #efe8df;
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 2.5rem;
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            color: var(--light-brown);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .blog-content h2 {
+            color: var(--earth-brown);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+
+        /* Highlight Quote Box */
+        .quote-box {
+            background-color: #f4efe6;
+            border-left: 5px solid var(--earth-green);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: var(--earth-brown);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-content {
+                padding: 1.5rem;
+            }
+            .blog-post img {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Terra Taste Logo">
+                <span class="brand-title">Terra Taste</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>Mother Earth & Our Local Roots</h1>
+        <p>Honoring the volcanic soil, rich harvests, and the timeless heritage behind every tasty creation.</p>
+    </section>
+
+    <!-- Blog List Container -->
+    <div class="blog-container">
+
+        <!-- Post 1: Mother Earth, Mayon View & Farms -->
+        <article class="blog-post">
+            <img src="mayon.png" alt="Mayon Volcano and Green Farmlands">
+            <div class="blog-content">
+                <div class="blog-meta">Published by Terra Taste &bull; Mother Earth & Heritage</div>
+                <h2>Under the Watchful Eye of Mayon: The Bounty of Volcanic Soil</h2>
+                <p>At Terra Taste, our history and culinary identity are deeply intertwined with Mother Earth. There is an unmistakable magic found beneath the magnificent, perfect cone of Mayon Volcano. The rich, mineral-dense volcanic earth provides a nurturing cradle for our local crops, infusing every harvest with unmatched vitality and flavor.</p>
+                <p>Farming here is not merely an occupation; it is a sacred partnership with nature. The crops that sprout from these vibrant fields—from lush greens to tropical fruits—embody the purest essence of local sustainability. Every single ingredient tells a story of resilience, weather, and the nurturing heartbeat of our soil.</p>
+                <div class="quote-box">
+                    "When we honor the earth, the earth provides food that satisfies not just our physical hunger, but our deepest connection to home."
+                </div>
+            </div>
+        </article>
+
+        <!-- Post 2: Our Hardworking Farmers -->
+        <article class="blog-post">
+            <img src="farmer.png" alt="Local Farmer Working in the Fields">
+            <div class="blog-content">
+                <div class="blog-meta">Published by Terra Taste &bull; People of the Land</div>
+                <h2>Honoring Our Local Farmers: The Hands That Feed Us</h2>
+                <p>Behind every golden harvest and comforting dish stands the backbone of our community: our hardworking local farmers. From dawn until dusk, they tend to the fields with enduring patience, generational wisdom, and profound respect for the land.</p>
+                <p>Their tireless hands plant the seeds that eventually transform into the comforting meals you share with your family. By bridging the gap between global flavors and our deep local roots, we ensure that our farmers' dedication is celebrated, valued, and tasted in every single bite.</p>
+            </div>
+        </article>
+
+        <!-- Post 3: Traditional Local Cooking -->
+        <article class="blog-post">
+            <img src="local cooking.png" alt="Traditional Local Cooking with a View of Mayon">
+            <div class="blog-content">
+                <div class="blog-meta">Published by Terra Taste &bull; Culinary Traditions</div>
+                <h2>The Art of Local Cooking: Simmering Heritage in Every Pot</h2>
+                <p>There is a unique warmth that fills a kitchen rooted in tradition. Traditional local cooking relies on time-tested techniques, hearth fires, and earthen pots that bring out deep, authentic flavors. Framed by the serene view of Mayon through rustic windows, preparing meals becomes a heartfelt ritual.</p>
+                <p>Whether it is simmering savory broths or blending local spices with rich coconut milk and meats for recipes like our <em>Longganisa Carbonara</em>, every dish pays tribute to our ancestors. This dedication to authentic preparation ensures that every mouthful is genuinely tasty and rich with history.</p>
+            </div>
+        </article>
+
+        <!-- Post 4: Mango Harvest & Signature Drinks/Treats -->
+        <article class="blog-post">
+            <img src="mango harvest.png" alt="Mango Harvest Season">
+            <div class="blog-content">
+                <div class="blog-meta">Published by Terra Taste &bull; Seasonal Harvests & Sweet Creations</div>
+                <h2>The Golden Harvest: From Sun-Drenched Orchards to Your Table</h2>
+                <p>When the sun-drenched mango trees reach their peak harvest season, the air fills with sweet anticipation. Hand-picked by local growers, these vibrant golden fruits capture the pure sunshine of Mother Earth.</p>
+                <p>We take these farm-fresh treasures and craft them into our signature creations—such as the refreshing layers of our <strong>Avocado Mango Smoothies Halo-Halo</strong> and the decadent sweetness of our <strong>Mango Float Lava Crepe Cake</strong>. Alongside treats like our <strong>Mediterranean Sunshine Donut</strong>, every item is a celebration of what happens when local roots meet delicious, comforting flavors designed to make you and your family smile.</p>
+            </div>
+        </article>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Terra Taste. All rights reserved.</p>
+        <p>Global Flavors, Local Roots | Connect with us on IG & TikTok: @terra_taste & @terrataste.globalroots</p>
+    </footer>
+
+</body>
+</html>
