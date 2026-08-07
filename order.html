@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Guide & Inquiries | Terra Taste</title>
+    <style>
+        :root {
+            --earth-brown: #5C3A21;
+            --light-brown: #8D5B4C;
+            --soft-cream: #FDFBF7;
+            --earth-green: #3B5323;
+            --accent-gold: #C29B38;
+            --text-dark: #2C221E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--earth-brown);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .brand-title {
+            color: var(--soft-cream);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--soft-cream);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Page Banner */
+        .page-banner {
+            background: linear-gradient(rgba(92, 58, 33, 0.8), rgba(59, 83, 35, 0.8)), url('mayon.png') no-repeat center center/cover;
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .page-banner h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-banner p {
+            font-size: 1.1rem;
+            max-width: 650px;
+            margin: 0 auto;
+            color: #f0ebd8;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            margin-bottom: 2.5rem;
+        }
+
+        .card h2 {
+            color: var(--earth-brown);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+
+        .social-links {
+            background-color: #f4efe6;
+            border-left: 5px solid var(--accent-gold);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .social-links ul {
+            list-style: none;
+            margin-top: 0.5rem;
+        }
+
+        .social-links li {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .social-links a {
+            color: var(--earth-green);
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Template Box */
+        .template-box {
+            background-color: #2C221E;
+            color: #FDFBF7;
+            padding: 1.5rem;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            border: 1px solid var(--accent-gold);
+        }
+
+        .email-highlight {
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        /* Closing Thank You */
+        .closing-note {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--earth-green);
+            font-weight: bold;
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Terra Taste Logo">
+                <span class="brand-title">Terra Taste</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="order.html" class="active">Order</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>How to Order & Connect With Us</h1>
+        <p>Online orders, event schedules, and direct booking details.</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <!-- Ordering Methods Card -->
+        <div class="card">
+            <h2>Order Methods & Availability</h2>
+            <p>Terra Taste operates primarily on <strong>online orders</strong> with options for <strong>delivery, pick-up, and meet-up</strong>.</p>
+            <p>Because we also actively participate, visit, and host booths at local events and festivals, our schedule and physical locations can sometimes shift. We love to see you there in person!</p>
+            
+            <div class="social-links">
+                <p>To stay completely updated with our exact services, pop-up locations, and live agent chat, please follow us on social media:</p>
+                <ul>
+                    <li>Instagram: <a href="https://instagram.com/terrataste.globalroots" target="_blank">@terrataste.globalroots</a></li>
+                    <li>TikTok: <a href="https://tiktok.com/@terra_taste" target="_blank">@terra_taste</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Advance Ordering & Email Instructions Card -->
+        <div class="card">
+            <h2>Advance Ordering & Email Instructions</h2>
+            <p>Since we often receive a high volume of orders during special events, we recommend ordering in advance so we can ensure everything is prepared perfectly and nothing gets missed.</p>
+            <p>To place your advance order accurately, please copy the template below, fill out your details, and send it directly to our main email address: <span class="email-highlight">terrataste@outlook.com</span>.</p>
+            
+            <p><strong>Copy Order Template:</strong></p>
+            <div class="template-box">Name: [Your Full Name]
+Delivery Address / Meet-up Location: [Your Address or Location]
+Preferred Items & Quantity: [Item Name & How Many]
+Preferred Date & Time: [Date & Time]
+Special Request / Allergies Notes: [Any notes or specific instructions]</div>
+
+            <p style="margin-top: 1.5rem;"><em>Note: You can also use this same email address (<span class="email-highlight">terrataste@outlook.com</span>) to reach out for event invitations and general inquiries!</em></p>
+        </div>
+
+        <!-- Closing Note -->
+        <div class="closing-note">
+            Thank you for ordering and for your wonderful interest! We love to make you happy and satisfy your cravings together with your family.
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Terra Taste. All rights reserved.</p>
+        <p>Global Flavors, Local Roots | Connect with us on IG & TikTok: @terra_taste & @terrataste.globalroots</p>
+    </footer>
+
+</body>
+</html>
