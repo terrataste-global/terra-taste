@@ -35,6 +35,7 @@
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border-bottom: 2px solid var(--accent-gold);
         }
 
         .nav-container {
@@ -49,7 +50,7 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .logo-container img {
@@ -60,18 +61,33 @@
             border: 2px solid var(--accent-gold);
         }
 
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
         .brand-title {
             color: var(--soft-cream);
             font-size: 1.5rem;
             font-weight: bold;
             letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .brand-subtitle {
+            color: var(--accent-gold);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
+            align-items: center;
         }
 
         nav ul li a {
@@ -85,13 +101,26 @@
             color: var(--accent-gold);
         }
 
-        /* Page Banner */
+        /* Page Banner matching Index/Services/Order format */
         .page-banner {
             background: linear-gradient(rgba(92, 58, 33, 0.8), rgba(59, 83, 35, 0.8)), url('mayon.png') no-repeat center center/cover;
             color: var(--soft-cream);
             text-align: center;
             padding: 5rem 1.5rem;
             position: relative;
+        }
+
+        .banner-tag {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            border: 1px solid var(--accent-gold);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .page-banner h1 {
@@ -233,12 +262,15 @@
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Navigation with exact brand subtitle structure -->
     <header>
         <div class="nav-container">
             <div class="logo-container">
                 <img src="logo.jpeg" alt="Terra Taste Logo">
-                <span class="brand-title">Terra Taste</span>
+                <div class="brand-text">
+                    <span class="brand-title">Terra Taste</span>
+                    <span class="brand-subtitle">Global Flavors</span>
+                </div>
             </div>
             <nav>
                 <ul>
@@ -251,8 +283,9 @@
         </div>
     </header>
 
-    <!-- Page Banner -->
+    <!-- Page Banner with Tag matching other pages -->
     <section class="page-banner">
+        <div class="banner-tag">Stories from the Roots</div>
         <h1>Stories from the Roots & Mother Earth</h1>
         <p>Journey through the volcanic history, rich harvests, and ancestral traditions that breathe authentic life and taste into every Terra Taste creation.</p>
     </section>
@@ -260,7 +293,7 @@
     <!-- Blog List Container -->
     <div class="blog-container">
 
-        <!-- Post 1: Mother Earth, Mayon View & Volcanic Soil History -->
+        <!-- Post 1 -->
         <article class="blog-post">
             <img src="mayon.png" alt="Mayon Volcano and Green Farmlands">
             <div class="blog-content">
@@ -286,7 +319,7 @@
             </div>
         </article>
 
-        <!-- Post 2: Our Hardworking Farmers -->
+        <!-- Post 2 -->
         <article class="blog-post">
             <img src="farmer.png" alt="Local Farmer Working in the Fields">
             <div class="blog-content">
@@ -297,7 +330,7 @@
             </div>
         </article>
 
-        <!-- Post 3: Traditional Local Cooking -->
+        <!-- Post 3 -->
         <article class="blog-post">
             <img src="local cooking.png" alt="Traditional Local Cooking with a View of Mayon">
             <div class="blog-content">
@@ -308,7 +341,7 @@
             </div>
         </article>
 
-        <!-- Post 4: Mango Harvest & Signature Drinks/Treats -->
+        <!-- Post 4 -->
         <article class="blog-post">
             <img src="mango harvest.png" alt="Mango Harvest Season">
             <div class="blog-content">
