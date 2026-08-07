@@ -6,12 +6,15 @@
     <title>Order Guide & Inquiries | Terra Taste</title>
     <style>
         :root {
-            --earth-brown: #5C3A21;
-            --light-brown: #8D5B4C;
-            --soft-cream: #FDFBF7;
-            --earth-green: #3B5323;
-            --accent-gold: #C29B38;
-            --text-dark: #2C221E;
+            --earth-brown: #4A3319;
+            --light-brown: #79553D;
+            --soft-cream: #FAF7F2;
+            --card-bg: #FFFFFF;
+            --earth-green: #314421;
+            --accent-gold: #D4AF37;
+            --text-dark: #231C18;
+            --text-muted: #62554B;
+            --transition: all 0.3s ease;
         }
 
         * {
@@ -21,20 +24,21 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background-color: var(--soft-cream);
             color: var(--text-dark);
             line-height: 1.8;
         }
 
-        /* Navigation Bar */
+        /* Professional Header & Navigation */
         header {
             background-color: var(--earth-brown);
-            padding: 1rem 2rem;
+            padding: 0.8rem 2rem;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-bottom: 2px solid var(--accent-gold);
         }
 
         .nav-container {
@@ -43,177 +47,307 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 14px;
+            text-decoration: none;
         }
 
         .logo-container img {
-            height: 50px;
-            width: 50px;
+            height: 52px;
+            width: 52px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--accent-gold);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
         }
 
         .brand-title {
             color: var(--soft-cream);
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 1px;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .brand-subtitle {
+            color: var(--accent-gold);
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
+            gap: 25px;
+            align-items: center;
         }
 
         nav ul li a {
             color: var(--soft-cream);
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
         }
 
         nav ul li a:hover, nav ul li a.active {
             color: var(--accent-gold);
+            background-color: rgba(255, 255, 255, 0.05);
         }
 
-        /* Page Banner */
+        /* Enhanced Page Banner matching Home Hero */
         .page-banner {
-            background: linear-gradient(rgba(92, 58, 33, 0.8), rgba(59, 83, 35, 0.8)), url('mayon.png') no-repeat center center/cover;
+            background: linear-gradient(rgba(48, 32, 17, 0.88), rgba(31, 68, 33, 0.85)), url('mayon.png') no-repeat center center/cover;
             color: var(--soft-cream);
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 6rem 1.5rem 5rem 1.5rem;
+            position: relative;
+        }
+
+        .page-banner span.badge {
+            display: inline-block;
+            background-color: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
         }
 
         .page-banner h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
         }
 
         .page-banner p {
-            font-size: 1.1rem;
-            max-width: 650px;
+            font-size: 1.2rem;
+            max-width: 700px;
             margin: 0 auto;
-            color: #f0ebd8;
+            color: #EFECE6;
+            font-weight: 300;
         }
 
         /* Main Container */
         .container {
-            max-width: 800px;
-            margin: 3rem auto;
+            max-width: 900px;
+            margin: 4rem auto;
             padding: 0 1.5rem;
         }
 
         .card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-            margin-bottom: 2.5rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(74, 51, 25, 0.08);
+            margin-bottom: 3rem;
+            border: 1px solid rgba(74, 51, 25, 0.06);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            box-shadow: 0 14px 35px rgba(74, 51, 25, 0.12);
+        }
+
+        .section-badge {
+            display: inline-block;
+            background-color: rgba(49, 68, 33, 0.08);
+            color: var(--earth-green);
+            padding: 0.35rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .card h2 {
             color: var(--earth-brown);
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
         }
 
         .card p {
-            margin-bottom: 1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
             font-size: 1.05rem;
+            line-height: 1.8;
         }
 
-        .social-links {
-            background-color: #f4efe6;
-            border-left: 5px solid var(--accent-gold);
+        /* Service Options Grid */
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .option-box {
+            background-color: var(--soft-cream);
             padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(74, 51, 25, 0.1);
+        }
+
+        .option-box h3 {
+            color: var(--earth-brown);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .option-box p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+
+        /* Social Highlight Box */
+        .social-links {
+            background-color: #FAF5EE;
+            border-left: 4px solid var(--earth-green);
+            padding: 1.5rem 2rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2rem 0;
+        }
+
+        .social-links p {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin-bottom: 0.8rem;
         }
 
         .social-links ul {
             list-style: none;
-            margin-top: 0.5rem;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .social-links li {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .social-links a {
+        .social-links li a {
             color: var(--earth-green);
             text-decoration: none;
+            font-weight: 700;
+            transition: var(--transition);
         }
 
-        .social-links a:hover {
+        .social-links li a:hover {
+            color: var(--accent-gold);
             text-decoration: underline;
         }
 
         /* Template Box */
         .template-box {
-            background-color: #2C221E;
-            color: #FDFBF7;
-            padding: 1.5rem;
-            border-radius: 8px;
-            font-family: monospace;
+            background-color: var(--earth-brown);
+            color: var(--soft-cream);
+            padding: 1.8rem;
+            border-radius: 12px;
+            font-family: 'Courier New', Courier, monospace;
             white-space: pre-wrap;
             margin: 1.5rem 0;
             font-size: 0.95rem;
             border: 1px solid var(--accent-gold);
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.2);
         }
 
         .email-highlight {
-            color: var(--accent-gold);
-            font-weight: bold;
+            color: var(--earth-green);
+            font-weight: 700;
+            background-color: rgba(49, 68, 33, 0.08);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
         }
 
-        /* Closing Thank You */
+        /* Closing Thank You Note */
         .closing-note {
             text-align: center;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--earth-green);
-            font-weight: bold;
-            margin-top: 2rem;
-            padding: 1.5rem;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            font-weight: 700;
+            margin-top: 3rem;
+            padding: 2.5rem;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(74, 51, 25, 0.08);
+            border: 1px solid rgba(74, 51, 25, 0.06);
+            line-height: 1.6;
         }
 
-        /* Footer */
+        /* Professional Footer */
         footer {
             background-color: var(--earth-brown);
             color: var(--soft-cream);
             text-align: center;
-            padding: 2.5rem 1.5rem;
-            margin-top: 4rem;
+            padding: 3.5rem 1.5rem;
+            border-top: 3px solid var(--accent-gold);
+            margin-top: 5rem;
         }
 
+        footer p {
+            margin-bottom: 0.6rem;
+            font-size: 1rem;
+        }
+
+        footer p.socials {
+            color: var(--accent-gold);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-top: 1rem;
+        }
+
+        /* Mobile Responsiveness */
         @media (max-width: 768px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+            .page-banner h1 {
+                font-size: 2.2rem;
+            }
             .card {
-                padding: 1.5rem;
+                padding: 2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            nav ul {
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Professional Navigation Bar -->
     <header>
         <div class="nav-container">
-            <div class="logo-container">
+            <a href="index.html" class="logo-container">
                 <img src="logo.jpeg" alt="Terra Taste Logo">
-                <span class="brand-title">Terra Taste</span>
-            </div>
+                <div class="brand-text">
+                    <span class="brand-title">Terra Taste</span>
+                    <span class="brand-subtitle">Global Flavors</span>
+                </div>
+            </a>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -227,21 +361,39 @@
 
     <!-- Page Banner -->
     <section class="page-banner">
-        <h1>How to Order & Connect With Us</h1>
-        <p>Online orders, event schedules, and direct booking details.</p>
+        <span class="badge">Seamless Ordering &amp; Connection</span>
+        <h1>How to Order &amp; Connect With Us</h1>
+        <p>Explore online ordering options, festival pop-up locations, and direct booking details.</p>
     </section>
 
-    <!-- Main Content -->
+    <!-- Main Content Container -->
     <div class="container">
 
         <!-- Ordering Methods Card -->
         <div class="card">
-            <h2>Order Methods & Availability</h2>
-            <p>Terra Taste operates primarily on <strong>online orders</strong> with options for <strong>delivery, pick-up, and meet-up</strong>.</p>
-            <p>Because we also actively participate, visit, and host booths at local events and festivals, our schedule and physical locations can sometimes shift. We love to see you there in person!</p>
+            <span class="section-badge">Convenient Fulfillment</span>
+            <h2>Order Methods &amp; Availability</h2>
+            <p>Terra Taste operates primarily on <strong>online orders</strong> to bring fresh global-local fusion flavors straight to your table.</p>
+            
+            <div class="options-grid">
+                <div class="option-box">
+                    <h3>Delivery</h3>
+                    <p>Right to your doorstep for ultimate comfort and convenience.</p>
+                </div>
+                <div class="option-box">
+                    <h3>Pick-Up</h3>
+                    <p>Grab your freshly prepared orders on the go.</p>
+                </div>
+                <div class="option-box">
+                    <h3>Meet-Up</h3>
+                    <p>Convenient exchange points within local routes.</p>
+                </div>
+            </div>
+
+            <p>Because we also actively participate, visit, and host booths at dynamic local events and festivals, our schedule and physical locations can sometimes shift. We love seeing you there in person!</p>
             
             <div class="social-links">
-                <p>To stay completely updated with our exact services, pop-up locations, and live agent chat, please follow us on social media:</p>
+                <p>To stay completely updated with our exact services, festival pop-up locations, and live agent chat, please follow our official social channels:</p>
                 <ul>
                     <li>Instagram: <a href="https://instagram.com/terrataste.globalroots" target="_blank">@terrataste.globalroots</a></li>
                     <li>TikTok: <a href="https://tiktok.com/@terra_taste" target="_blank">@terra_taste</a></li>
@@ -251,31 +403,33 @@
 
         <!-- Advance Ordering & Email Instructions Card -->
         <div class="card">
-            <h2>Advance Ordering & Email Instructions</h2>
-            <p>Since we often receive a high volume of orders during special events, we recommend ordering in advance so we can ensure everything is prepared perfectly and nothing gets missed.</p>
-            <p>To place your advance order accurately, please copy the template below, fill out your details, and send it directly to our main email address: <span class="email-highlight">terrataste@outlook.com</span>.</p>
+            <span class="section-badge">Advance Bookings</span>
+            <h2>Advance Ordering &amp; Email Instructions</h2>
+            <p>Since we often receive a high volume of orders during special events and festivals, we highly recommend ordering in advance so we can ensure everything is prepared perfectly and nothing gets missed.</p>
+            <p>To place your advance order accurately, please copy the template below, fill out your details, and send it directly to our primary email address: <span class="email-highlight">terrataste@outlook.com</span>.</p>
             
             <p><strong>Copy Order Template:</strong></p>
             <div class="template-box">Name: [Your Full Name]
 Delivery Address / Meet-up Location: [Your Address or Location]
-Preferred Items & Quantity: [Item Name & How Many]
-Preferred Date & Time: [Date & Time]
+Preferred Items &amp; Quantity: [Item Name &amp; How Many]
+Preferred Date &amp; Time: [Date &amp; Time]
 Special Request / Allergies Notes: [Any notes or specific instructions]</div>
 
-            <p style="margin-top: 1.5rem;"><em>Note: You can also use this same email address (<span class="email-highlight">terrataste@outlook.com</span>) to reach out for event invitations and general inquiries!</em></p>
+            <p style="margin-top: 1.5rem;"><em>Note: You can also use this same email address (<span class="email-highlight">terrataste@outlook.com</span>) to reach out for event invitations, vendor bookings, and general inquiries! Our team is always happy to collaborate.</em></p>
         </div>
 
         <!-- Closing Note -->
         <div class="closing-note">
-            Thank you for ordering and for your wonderful interest! We love to make you happy and satisfy your cravings together with your family.
+            Thank you for ordering and for your wonderful interest! We love to make you happy and satisfy your cravings together with your family. 🤎✨
         </div>
 
     </div>
 
-    <!-- Footer -->
+    <!-- Professional Footer -->
     <footer>
         <p>&copy; 2026 Terra Taste. All rights reserved.</p>
-        <p>Global Flavors, Local Roots | Connect with us on IG & TikTok: @terra_taste & @terrataste.globalroots</p>
+        <p>Global Flavors, Local Roots &mdash; Crafted with Care and Ancestral Heritage.</p>
+        <p class="socials">Connect with us on IG &amp; TikTok: @terra_taste &amp; @terrataste.globalroots</p>
     </footer>
 
 </body>
