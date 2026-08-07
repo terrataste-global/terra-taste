@@ -30,7 +30,7 @@
         /* Navigation Bar */
         header {
             background-color: var(--earth-brown);
-            padding: 1rem 2rem;
+            padding: 1rem;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -45,6 +45,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            gap: 15px;
         }
 
         .logo-container {
@@ -54,8 +55,8 @@
         }
 
         .logo-container img {
-            height: 50px;
-            width: 50px;
+            height: 45px;
+            width: 45px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid var(--accent-gold);
@@ -68,7 +69,7 @@
 
         .brand-title {
             color: var(--soft-cream);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: bold;
             letter-spacing: 1px;
             line-height: 1.2;
@@ -76,7 +77,7 @@
 
         .brand-subtitle {
             color: var(--accent-gold);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -85,7 +86,7 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 18px;
             flex-wrap: wrap;
             align-items: center;
         }
@@ -94,6 +95,7 @@
             color: var(--soft-cream);
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
             transition: color 0.3s ease;
         }
 
@@ -101,12 +103,12 @@
             color: var(--accent-gold);
         }
 
-        /* Page Banner matching Index/Services/Order format */
+        /* Page Banner */
         .page-banner {
             background: linear-gradient(rgba(92, 58, 33, 0.8), rgba(59, 83, 35, 0.8)), url('mayon.png') no-repeat center center/cover;
             color: var(--soft-cream);
             text-align: center;
-            padding: 5rem 1.5rem;
+            padding: 4rem 1rem;
             position: relative;
         }
 
@@ -115,7 +117,7 @@
             padding: 0.4rem 1.2rem;
             border: 1px solid var(--accent-gold);
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: var(--accent-gold);
@@ -124,25 +126,27 @@
         }
 
         .page-banner h1 {
-            font-size: 3rem;
+            font-size: 2.3rem;
             margin-bottom: 0.8rem;
             font-weight: 800;
             letter-spacing: 0.5px;
             text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            word-break: break-word;
         }
 
         .page-banner p {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             max-width: 700px;
             margin: 0 auto;
             color: #f8f3e6;
+            padding: 0 0.5rem;
         }
 
         /* Blog Container */
         .blog-container {
             max-width: 900px;
-            margin: 3.5rem auto;
-            padding: 0 1.5rem;
+            margin: 2.5rem auto;
+            padding: 0 1rem;
         }
 
         .blog-post {
@@ -150,27 +154,24 @@
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(92, 58, 33, 0.08);
-            margin-bottom: 3.5rem;
+            margin-bottom: 2.5rem;
             border: 1px solid #efe8df;
             transition: transform 0.3s ease;
         }
 
-        .blog-post:hover {
-            transform: translateY(-4px);
-        }
-
         .blog-post img {
             width: 100%;
-            height: 420px;
+            height: 380px;
             object-fit: cover;
+            display: block;
         }
 
         .blog-content {
-            padding: 3rem;
+            padding: 2.5rem 2rem;
         }
 
         .blog-meta {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--accent-gold);
             margin-bottom: 0.8rem;
             font-weight: 700;
@@ -180,55 +181,56 @@
 
         .blog-content h2 {
             color: var(--earth-brown);
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             margin-bottom: 1.2rem;
             line-height: 1.3;
         }
 
         .blog-content p {
             margin-bottom: 1.4rem;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: #43352f;
+            word-break: break-word;
         }
 
         /* Highlight Quote Box */
         .quote-box {
             background-color: #f7f3ec;
             border-left: 6px solid var(--earth-green);
-            padding: 1.8rem;
+            padding: 1.5rem;
             border-radius: 0 12px 12px 0;
             margin: 2rem 0;
             font-style: italic;
             color: var(--earth-brown);
             font-weight: 600;
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             line-height: 1.6;
         }
 
         /* Feature Highlights Grid inside blog */
         .highlight-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem;
             margin: 2rem 0;
         }
 
         .highlight-card {
             background: #fdfbf7;
             border: 1px solid #e7ded0;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 12px;
             text-align: center;
         }
 
         .highlight-card h4 {
             color: var(--earth-green);
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             margin-bottom: 0.5rem;
         }
 
         .highlight-card p {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             margin-bottom: 0;
             color: #5c4b43;
         }
@@ -238,31 +240,61 @@
             background-color: var(--earth-brown);
             color: var(--soft-cream);
             text-align: center;
-            padding: 3rem 1.5rem;
-            margin-top: 5rem;
+            padding: 2.5rem 1rem;
+            margin-top: 4rem;
             border-top: 4px solid var(--accent-gold);
         }
 
         footer p {
             margin-bottom: 0.5rem;
+            font-size: 0.95rem;
         }
 
+        /* Mobile Responsive Adjustments */
         @media (max-width: 768px) {
-            .blog-content {
-                padding: 1.8rem;
+            header {
+                padding: 0.8rem 1rem;
             }
-            .blog-post img {
-                height: 260px;
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            nav ul {
+                justify-content: center;
+                gap: 15px;
+            }
+            .page-banner {
+                padding: 3rem 1rem;
             }
             .page-banner h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
+            }
+            .page-banner p {
+                font-size: 0.95rem;
+            }
+            .blog-container {
+                padding: 0 0.5rem;
+                margin: 1.5rem auto;
+            }
+            .blog-content {
+                padding: 1.5rem 1.2rem;
+            }
+            .blog-post img {
+                height: 230px;
+            }
+            .blog-content h2 {
+                font-size: 1.4rem;
+            }
+            .blog-content p {
+                font-size: 0.98rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation with exact brand subtitle structure -->
+    <!-- Header & Navigation -->
     <header>
         <div class="nav-container">
             <div class="logo-container">
@@ -283,7 +315,7 @@
         </div>
     </header>
 
-    <!-- Page Banner with Tag matching other pages -->
+    <!-- Page Banner -->
     <section class="page-banner">
         <div class="banner-tag">Stories from the Roots</div>
         <h1>Stories from the Roots & Mother Earth</h1>
