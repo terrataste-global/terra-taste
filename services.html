@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services & Menu | Terra Taste</title>
+    <style>
+        :root {
+            --earth-brown: #5C3A21;
+            --light-brown: #8D5B4C;
+            --soft-cream: #FDFBF7;
+            --earth-green: #3B5323;
+            --accent-gold: #C29B38;
+            --text-dark: #2C221E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--soft-cream);
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--earth-brown);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .brand-title {
+            color: var(--soft-cream);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: var(--soft-cream);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover, nav ul li a.active {
+            color: var(--accent-gold);
+        }
+
+        /* Page Banner */
+        .page-banner {
+            background: linear-gradient(rgba(92, 58, 33, 0.8), rgba(59, 83, 35, 0.8)), url('mayon.png') no-repeat center center/cover;
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .page-banner h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .page-banner p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #f0ebd8;
+        }
+
+        /* Menu Container */
+        .menu-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .menu-item {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 100%;
+            min-height: 280px;
+            object-fit: cover;
+        }
+
+        .menu-details {
+            padding: 2.5rem;
+        }
+
+        .menu-details h2 {
+            color: var(--earth-brown);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .origin-tag {
+            display: inline-block;
+            background-color: #f4efe6;
+            color: var(--earth-green);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            border: 1px solid var(--accent-gold);
+        }
+
+        .menu-details p {
+            color: var(--text-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .order-link-btn {
+            display: inline-block;
+            background-color: var(--earth-green);
+            color: var(--soft-cream);
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: background 0.3s ease;
+        }
+
+        .order-link-btn:hover {
+            background-color: #2b3d19;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--earth-brown);
+            color: var(--soft-cream);
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-item {
+                grid-template-columns: 1fr;
+            }
+            .page-banner h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="logo.jpeg" alt="Terra Taste Logo">
+                <span class="brand-title">Terra Taste</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="order.html">Order</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner">
+        <h1>Our Yummy Menu & Services</h1>
+        <p>Explore our unique, earthy culinary creations, each infused with global flair and deep local roots.</p>
+    </section>
+
+    <!-- Menu List -->
+    <div class="menu-container">
+
+        <!-- Item 1 -->
+        <div class="menu-item">
+            <img src="avocado mango smoothies halo halo.png" alt="Avocado Mango Smoothies Halo Halo">
+            <div class="menu-details">
+                <span class="origin-tag">Filipino Beverage Heritage</span>
+                <h2>Avocado Mango Smoothies Halo-Halo</h2>
+                <p>A refreshing masterpiece designed especially for hot summer days! Combining the creamy, rich textures of fresh local avocado and sweet Philippine mangoes with a unique twist on classic halo-halo traditions. Yummy, vibrant, and deeply satisfying.</p>
+                <a href="order.html" class="order-link-btn">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="menu-item">
+            <img src="Mediterranean Sunshine Donut.png" alt="Mediterranean Sunshine Donut">
+            <div class="menu-details">
+                <span class="origin-tag">European Fusion</span>
+                <h2>Mediterranean Sunshine Donut</h2>
+                <p>Brought from European inspirations, this artisanal donut is glazed with sunny citrus and topped with crunchy pistachios and candied fruits. A burst of Mediterranean warmth in every single bite!</p>
+                <a href="order.html" class="order-link-btn">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="menu-item">
+            <img src="Longganisa Carbonara (Savory Twist).png" alt="Longganisa Carbonara">
+            <div class="menu-details">
+                <span class="origin-tag">Filipino Savory Twist</span>
+                <h2>Longganisa Carbonara</h2>
+                <p>An incredible fusion dish blending classic Italian carbonara richness with savory, sweet, and garlicky local Filipino longganisa pieces. A comforting, unforgettable savory experience that feels like home.</p>
+                <a href="order.html" class="order-link-btn">Order Now</a>
+            </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="menu-item">
+            <img src="Mango Float Lava Crepe Cake.png" alt="Mango Float Lava Crepe Cake">
+            <div class="menu-details">
+                <span class="origin-tag">Filipino Classic Reimagined</span>
+                <h2>Mango Float Lava Crepe Cake</h2>
+                <p>Inspired by the beloved Filipino Graham Float tradition, this delicate layered crepe cake is stacked with sweet mango slices and finished with a rich, pourable caramel-mango lava drizzle. Decadent, sweet, and uniquely local.</p>
+                <a href="order.html" class="order-link-btn">Order Now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Terra Taste. All rights reserved.</p>
+        <p>Global Flavors, Local Roots | Connect with us on IG & TikTok: @terra_taste & @terrataste.globalroots</p>
+    </footer>
+
+</body>
+</html>
